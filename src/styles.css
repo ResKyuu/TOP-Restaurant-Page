@@ -5,3 +5,51 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #8d1a1a;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  height: 3.5em;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav > .btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  display: inline-block;
+}
+
+.btn::after {
+  content: ''; 
+  position: absolute;
+  width: 0; 
+  height: 2px; 
+  display: block;
+  margin-top: 2px; 
+  left: 0; 
+  background: #ffffff; 
+  transition: width 0.3s ease; 
+  border-radius: 5%;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
