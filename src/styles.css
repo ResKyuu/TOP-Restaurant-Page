@@ -1,55 +1,83 @@
-/* styles.css */
+/* styles.css - #6b0400 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "REM", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
 header {
+  position: relative;
+  background-color: #6b0400;
+  background-image: url("https://www.transparenttextures.com/patterns/fake-luxury.png");
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  background-color: #8d1a1a;
+  align-items: center;
   color: white;
-  padding: 5px 0;
+  padding: 10px 10px;
   text-align: center;
-  height: 3.5em;
-  gap: 10px;
+  height: 5.5em;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
+  position: absolute;
 }
 
 nav > .btn {
+  font-family: "REM", sans-serif;
   background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
   outline: none;
-  padding: 10px 0;
+  padding: 5px 0;
   position: relative;
   display: inline-block;
 }
 
 .btn::after {
-  content: ''; 
+  content: "";
   position: absolute;
-  width: 0; 
-  height: 2px; 
+  width: 0;
+  height: 2px;
   display: block;
-  margin-top: 2px; 
-  left: 0; 
-  background: #ffffff; 
-  transition: width 0.3s ease; 
+  margin-top: 2px;
+  left: 0;
+  background: #ffffff;
+  transition: width 0.3s ease;
   border-radius: 5%;
 }
 
 .btn:hover::after {
   width: 100%;
+}
+
+header > img {
+  width: 100px;
+  height: 85px;
+  margin-right: auto;
+  position: relative;
+  filter: brightness(0) invert(1);
+}
+
+.homePageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
