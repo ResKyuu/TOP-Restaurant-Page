@@ -9,21 +9,20 @@
 
 body {
   font-family: "REM", sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
   line-height: 1.6;
   overflow: hidden;
+  background-color: #09020d;
+  background-image: url("https://www.transparenttextures.com/patterns/gray-sand.png");
 }
 
 header {
+  background-color: rgba(0, 0, 0, 0.288);
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 19px 38px,
+    rgba(0, 0, 0, 0.445) 0px 15px 12px;
   position: relative;
-  background-color: #6b0400;
-  background-image: url("https://www.transparenttextures.com/patterns/fake-luxury.png");
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   padding: 10px 10px;
   text-align: center;
   height: 5.5em;
@@ -76,29 +75,84 @@ header > img {
   filter: brightness(0) invert(1);
 }
 
-
 .homePageImage {
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center bottom;
-  
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homePageContent {
-  top: 15%;
-  left: 5%;
+  margin-top: -88px;
   padding: 30px;
   width: 80em;
-  height: 30em;
+  height: 47.5em;
   position: absolute;
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.377);
+  background-color: rgba(0, 0, 0, 0.486);
 }
 
 .homePageContent h1 {
   font-size: 5em;
   margin-bottom: 20px;
   color: rgb(255, 158, 12);
+}
+
+.homePageContent > p {
+  font-size: 1.5em;
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.678);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 19px 38px,
+    rgba(0, 0, 0, 0.445) 0px 15px 12px;
+  width: 30em;
+  height: 18em;
+}
+
+.card h2 {
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.card > p {
+  width: auto;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.cardDiv {
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  gap: 10px;
+}
+
+.cardDiv > p {
+  font-size: 1.2em;
+}
+
+.specialOfferText {
+  font-size: 1.4em;
+  color: rgb(255, 158, 12);
+  font-weight: bold;
 }
