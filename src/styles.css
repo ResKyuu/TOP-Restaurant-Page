@@ -7,15 +7,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
 
-body {
+.bodyHomepage {
   font-family: "REM", sans-serif;
   line-height: 1.6;
   overflow: hidden;
   background-color: #09020d;
   background-image: url("https://www.transparenttextures.com/patterns/gray-sand.png");
+  width: 100%;
+  height: 100%;
 }
 
 header {
+  position: sticky !important;
   background-color: rgba(0, 0, 0, 0.288);
   box-shadow: rgba(0, 0, 0, 0.123) 0px 19px 38px,
     rgba(0, 0, 0, 0.445) 0px 15px 12px;
@@ -82,10 +85,11 @@ header > img {
   object-position: center bottom;
 }
 
-#content {
+.homepage {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .homePageContent {
@@ -97,6 +101,7 @@ header > img {
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 5px;
 }
 
 .homePageContent h1 {
@@ -155,4 +160,10 @@ header > img {
   font-size: 1.4em;
   color: rgb(255, 158, 12);
   font-weight: bold;
+}
+
+
+
+.menuItemCard {
+  display: flex;
 }

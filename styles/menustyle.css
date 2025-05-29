@@ -1,0 +1,67 @@
+/* Rest of styling for the header etc. are being Inherited from styles.css */
+
+.bodyMenupage {
+  overflow-y: scroll;
+  background-color: #09020d;
+  background-image: url("https://www.transparenttextures.com/patterns/gray-sand.png");
+  width: 100%;
+  height: 100%;
+  font-family: "REM", sans-serif;
+  line-height: 1.6;
+}
+
+.menupage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuPageContent {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.menuPageContent > h1 {
+  font-size: 5em;
+  margin-bottom: 20px;
+  color: rgb(255, 158, 12);
+}
+.menuPageContent > p {
+  margin-bottom: -15px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.menuPageContent > p:nth-child(4) {
+  margin-bottom: 60px;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.menuItems {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  width: 79.5%;
+  color: white;
+  gap: 20px;
+}
+
+.menuItemImageContainer > img {
+  width: 200px;
+  height: 150px;
+}
+
+.menuItemPrice {
+  font-size: 1.5em;
+  color: rgb(255, 158, 12);
+}

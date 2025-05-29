@@ -1,114 +1,106 @@
 import mainImage from "../images/779246.jpg";
+import "../styles.css";
 
+import { createElement } from "../domUtils.js";
+
+// Factory function for creating a special offer element (card & offer text)
+function createSpecialOffer(offerDetails) {
+
+
+  const cardTitleEl = createElement("h2", { textContent: offerDetails.cardTitle });
+  const cardTextEl = createElement("p", { textContent: "Avaliable Ingeredients:" });
+
+  const cardMeatEl = createElement("p", { textContent: `Meat: ${offerDetails.ingredients.meat}` });
+  const cardSaladEl = createElement("p", { textContent: `Veggies: ${offerDetails.ingredients.salad}` });
+  const cardSauceEl = createElement("p", { textContent: `Sauces: ${offerDetails.ingredients.sauces}` });
+
+  const cardIngDivEl = createElement("div", {
+    classList: "cardDiv",
+    children: [cardMeatEl, cardSaladEl, cardSauceEl],
+  });
+
+  const cardEl = createElement("div", {
+    classList: "card",
+    children: [cardTitleEl, cardTextEl, cardIngDivEl],
+  });
+
+  const specialOfferTextEl = createElement("h2", {
+    classList: "specialOfferText",
+    textContent: offerDetails.offerText,
+  });
+
+  // Main container for this specific offer (card & text)
+  const specialOfferDiv = createElement("div", {
+    classList: "specialOfferDiv",
+    children: [cardEl, specialOfferTextEl],
+  });
+
+  return specialOfferDiv;
+}
+
+// Refactored loadHomepage function
 function loadHomepage() {
   const mainContent = document.querySelector("#content");
-  const homePageImage = document.createElement("img");
-  const homePageContent = document.createElement("div");
-  const homePageTitle = document.createElement("h1");
-  const homePageText = document.createElement("p");
+  // Clear existing content
+  mainContent.innerHTML = "";
 
-  const cards = document.createElement("div");
-  const specialOfferDivOne = document.createElement("div");
-  const specialOfferDivTwo = document.createElement("div");
-  const specialOfferTextOne = document.createElement("h2");
-  const specialOfferTextTwo = document.createElement("h2");
 
-  const cardOne = document.createElement("div");
-  const cardTwo = document.createElement("div");
-  const cardOneTitle = document.createElement("h2");
-  const cardOneText = document.createElement("p");
-  const cardOneIngDiv = document.createElement("div");
-  const cardOneMeat = document.createElement("p");
-  const cardOneSalad = document.createElement("p");
-  const cardOneSauce = document.createElement("p");
+  const homePageTitle = createElement("h1", { textContent: "Craving for a delicious Kebab?" });
+  const homePageText = createElement("p", {
+    textContent: "Then you're in the right place! We have the best kebabs in town which will make you come back for more.\nCheck out our menu to see what we have to offer!",
+  });
 
-  const cardTwoTitle = document.createElement("h2");
-  const cardTwoText = document.createElement("p");
-  const cardTwoIngDiv = document.createElement("div");
-  const cardTwoMeat = document.createElement("p");
-  const cardTwoSalad = document.createElement("p");
-  const cardTwoSauce = document.createElement("p");
+  const homePageContent = createElement("div", {
+    classList: "homePageContent",
+    children: [homePageTitle, homePageText],
+  });
 
-  homePageContent.classList.add("homePageContent");
-  mainContent.appendChild(homePageContent);
+  // Data for special offers
+  const offersData = [
+    {
+      cardTitle: "Döner Kebab",
+      ingredients: {
+        meat: "Lamb, Chicken, Beef",
+        salad: "Eisberger Salad, Tomatos, Onions",
+        sauces: "Garlic, Chili, Yogurt, Tsatsiki, Cocktail",
+      },
+      offerText: "SPECIAL OFFER: TODAY FOR JUST 6.99€!",
+    },
+    {
+      cardTitle: "Dürüm Kebab",
+      ingredients: {
+        meat: "Lamb, Chicken, Beef",
+        salad: "Eisberger Salad, Tomatos, Onions",
+        sauces: "Garlic, Chili, Yogurt, Tsatsiki, Cocktail",
+      },
+      offerText: "SPECIAL OFFER: TODAY FOR JUST 7.99€!",
+    },
+  ];
 
-  homePageTitle.textContent = "Craving for a delicious Kebab?";
-  homePageContent.appendChild(homePageTitle);
+  // Create the cards container
+  const cardsContainer = createElement("div", { classList: "cards" });
 
-  homePageText.textContent =
-    "Then you're in the right place! We have the best kebabs in town which will make you come back for more";
-  homePageContent.appendChild(homePageText);
-  homePageText.textContent +=
-    "\nCheck out our menu to see what we have to offer!";
-  homePageContent.appendChild(homePageText);
+  // Loop through the data and create a special offer element for each
+  offersData.forEach(offerData => {
+    const offerElement = createSpecialOffer(offerData);
+    cardsContainer.appendChild(offerElement);
+  });
 
-  //create the cards container
-  cards.classList.add("cards");
-  homePageContent.appendChild(cards);
+  homePageContent.appendChild(cardsContainer); // Add the populated cards container
 
-  //create the special offer div
-  specialOfferDivOne.classList.add("specialOfferDiv");
-  specialOfferDivTwo.classList.add("specialOfferDiv");
+  // Create the main image for the homepage
+  const homePageImage = createElement("img", {
+    classList: "homePageImage",
+    src: mainImage,
+    attributes: { alt: "Delicious kebab" } // Good practice to add alt text
+  });
 
-  cards.appendChild(specialOfferDivOne);
-  cards.appendChild(specialOfferDivTwo);
-
-  //create the special offer text
-  specialOfferTextOne.classList.add("specialOfferText");
-  specialOfferTextTwo.classList.add("specialOfferText");
-
-  //create the first card
-  cardOne.classList.add("card");
-  specialOfferDivOne.appendChild(cardOne);
-
-  //create the title and text for the first card
-  cardOneTitle.textContent = "Döner Kebab";
-  cardOne.appendChild(cardOneTitle);
-  cardOneText.textContent = "Avaliable Ingeredients:";
-  cardOne.appendChild(cardOneText);
-
-  //create the lists for the first card
-  cardOneIngDiv.classList.add("cardDiv");
-  cardOne.appendChild(cardOneIngDiv);
-  cardOneMeat.textContent = "Meat: Lamb, Chicken, Beef";
-  cardOneIngDiv.appendChild(cardOneMeat);
-  cardOneSalad.textContent = "Veggies: Eisberger Salad, Tomatos, Onions";
-  cardOneIngDiv.appendChild(cardOneSalad);
-  cardOneSauce.textContent =
-    "Sauces: Garlic, Chili, Yogurt, Tsatsiki, Cocktail";
-  cardOneIngDiv.appendChild(cardOneSauce);
-  //create the second card
-  cardTwo.classList.add("card");
-  specialOfferDivTwo.appendChild(cardTwo);
-
-  //create the title and text for the second card
-  cardTwoTitle.textContent = "Dürüm Kebab";
-  cardTwo.appendChild(cardTwoTitle);
-  cardTwoText.textContent = "Avaliable Ingeredients:";
-  cardTwo.appendChild(cardTwoText);
-
-  //create the lists for the second card
-  cardTwoIngDiv.classList.add("cardDiv");
-  cardTwo.appendChild(cardTwoIngDiv);
-  cardTwoMeat.textContent = "Meat: Lamb, Chicken, Beef";
-  cardTwoIngDiv.appendChild(cardTwoMeat);
-  cardTwoSalad.textContent = "Veggies: Eisberger Salad, Tomatos, Onions";
-  cardTwoIngDiv.appendChild(cardTwoSalad);
-  cardTwoSauce.textContent =
-    "Sauces: Garlic, Chili, Yogurt, Tsatsiki, Cocktail";
-  cardTwoIngDiv.appendChild(cardTwoSauce);
-
-  specialOfferTextOne.textContent =
-    "SPECIAL OFFER: TODAY FOR JUST 6.99€!";
-  specialOfferTextTwo.textContent =
-    "SPECIAL OFFER: TODAY FOR JUST 7.99€!";
-  specialOfferDivOne.appendChild(specialOfferTextOne);
-  specialOfferDivTwo.appendChild(specialOfferTextTwo);
-
-  //create the main image for the homepage
-  homePageImage.classList.add("homePageImage");
-  homePageImage.src = mainImage;
-  mainContent.appendChild(homePageImage);
+  // Append all main sections to the #content div
+  // Use DocumentFragment for potentially better performance if appending many top-level items
+  const fragment = document.createDocumentFragment();
+  fragment.appendChild(homePageContent);
+  fragment.appendChild(homePageImage);
+  mainContent.appendChild(fragment);
 }
 
 export { loadHomepage };
