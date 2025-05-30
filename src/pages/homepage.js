@@ -1,7 +1,7 @@
 import mainImage from "../images/779246.jpg";
 import "../styles.css";
-
 import { createElement } from "../domUtils.js";
+import offersData from "../Data/offersData.json";
 
 // Factory function for creating a special offer element (card & offer text)
 function createSpecialOffer(offerDetails) {
@@ -9,7 +9,6 @@ function createSpecialOffer(offerDetails) {
 
   const cardTitleEl = createElement("h2", { textContent: offerDetails.cardTitle });
   const cardTextEl = createElement("p", { textContent: "Avaliable Ingeredients:" });
-
   const cardMeatEl = createElement("p", { textContent: `Meat: ${offerDetails.ingredients.meat}` });
   const cardSaladEl = createElement("p", { textContent: `Veggies: ${offerDetails.ingredients.salad}` });
   const cardSauceEl = createElement("p", { textContent: `Sauces: ${offerDetails.ingredients.sauces}` });
@@ -55,27 +54,6 @@ function loadHomepage() {
     children: [homePageTitle, homePageText],
   });
 
-  // Data for special offers
-  const offersData = [
-    {
-      cardTitle: "Döner Kebab",
-      ingredients: {
-        meat: "Lamb, Chicken, Beef",
-        salad: "Eisberger Salad, Tomatos, Onions",
-        sauces: "Garlic, Chili, Yogurt, Tsatsiki, Cocktail",
-      },
-      offerText: "SPECIAL OFFER: TODAY FOR JUST 6.99€!",
-    },
-    {
-      cardTitle: "Dürüm Kebab",
-      ingredients: {
-        meat: "Lamb, Chicken, Beef",
-        salad: "Eisberger Salad, Tomatos, Onions",
-        sauces: "Garlic, Chili, Yogurt, Tsatsiki, Cocktail",
-      },
-      offerText: "SPECIAL OFFER: TODAY FOR JUST 7.99€!",
-    },
-  ];
 
   // Create the cards container
   const cardsContainer = createElement("div", { classList: "cards" });

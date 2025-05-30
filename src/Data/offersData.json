@@ -1,0 +1,20 @@
+[
+  {
+    "cardTitle": "Döner Kebab",
+    "ingredients": {
+      "meat": "Lamb, Chicken, Beef",
+      "salad": "Eisberger Salad, Tomatos, Onions",
+      "sauces": "Garlic, Chili, Yogurt, Tsatsiki, Cocktail"
+    },
+    "offerText": "SPECIAL OFFER: TODAY FOR JUST 6.99€!"
+  },
+  {
+    "cardTitle": "Dürüm Kebab",
+    "ingredients": {
+      "meat": "Lamb, Chicken, Beef",
+      "salad": "Eisberger Salad, Tomatos, Onions",
+      "sauces": "Garlic, Chili, Yogurt, Tsatsiki, Cocktail"
+    },
+    "offerText": "SPECIAL OFFER: TODAY FOR JUST 7.99€!"
+  }
+]
