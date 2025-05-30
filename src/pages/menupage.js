@@ -1,4 +1,4 @@
-import "../../styles/menustyle.css";
+import "../styles/menustyle.css";
 //importing createElement Factory function to create DOM elements
 import { createElement } from "../domUtils.js";
 // Importing menu items data from JSON file

@@ -70,12 +70,16 @@ nav > .btn {
   width: 100%;
 }
 
-header > img {
+header > a > img {
   width: 100px;
   height: 85px;
-  margin-right: auto;
   position: relative;
   filter: brightness(0) invert(1);
+}
+
+header > a {
+  margin-top: 8px;
+  margin-right: auto;
 }
 
 .homePageImage {

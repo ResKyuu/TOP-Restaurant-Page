@@ -1,0 +1,104 @@
+.bodyAboutpage {
+  font-family: "REM", sans-serif;
+  line-height: 1.6;
+  overflow: hidden;
+  background-color: #09020d;
+  background-image: url("https://www.transparenttextures.com/patterns/gray-sand.png");
+  width: 100%;
+  height: 100%;
+}
+
+.aboutPageHeroImageContainer {
+  width: 100%;
+  height: 250px;
+}
+
+.aboutPageHeroImage {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.aboutPageCard {
+  margin-top: -90px;
+  background-color: rgba(0, 0, 0, 0.61);
+  border-radius: 10px;
+  width: 1500px;
+  height: 79vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutpage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPageTextContainer {
+  color: white;
+  margin-top: 20px;
+}
+
+.aboutPageTitle {
+  font-size: 3em;
+  color: rgb(255, 158, 12);
+}
+
+.aboutPageDescription {
+  font-size: 1em;
+  color: white;
+}
+
+.aboutPageDescription:nth-child(4) {
+  margin-bottom: 60px;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.aboutPageContactOpeningContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutPageContactTitle,
+.aboutPageOpeningHoursTitle {
+  font-size: 2.2em;
+  color: rgb(255, 158, 12);
+}
+
+.aboutPageContactInfo > * > p,
+.aboutPageOpeningHoursText {
+  font-size: 1.2em;
+  color: white;
+}
+
+.aboutPageContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aboutPageContactMail,
+.aboutPageContactPhone,
+.aboutPageContactPerson {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutPageOpeningHoursInfo > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

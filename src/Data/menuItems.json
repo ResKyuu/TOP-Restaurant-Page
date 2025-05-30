@@ -2,12 +2,12 @@
     {
         "name": "Döner Kebab",
         "description": "Our classic, savory döner kebab with your choice of fresh toppings and sauces.",
-        "price": "€6.99"
+        "price": "!€6.99"
     },
     {
         "name": "Dürüm Kebab",
         "description": "All the goodness of a döner wrapped in a warm, soft yufka bread.",
-        "price": "€7.50"
+        "price": "!€7.99"
     },
     {
         "name": "Vegetarian Kebab",
